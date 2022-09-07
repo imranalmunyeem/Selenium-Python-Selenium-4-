@@ -68,5 +68,61 @@
                         
                         
  ### ⚫ How to make custom XPATH?
- 
- 
+             --- Every element does not	have an	id->static id, unique name, unique link text. For those	elements we need to build xpath	to find	and then perform actions on them.
+             --- Difference between single ‘/’ or double ‘//’
+                --- Single slash ‘/’: anywhere in xpath	signifies to look for the element immediately inside the parent	element.
+                --- Double slash ‘//’ signifies	to look	for any	child or nested child element inside the parent	element.
+                --- Syntax:
+                        //tag[@attribute='value']
+                        
+                        Relative xpath using single ‘/’	for Login link:
+                                //div[@id='navbar']/div/div/div/ul/li[2]/a
+                                
+                        Relative xpath using double ‘//’ for Login link:
+                                //div[@id='navbar']//ul/li[2]/a    
+                                
+                        Don’t use “*”, always use the tag name.
+                        
+                        Using Text of the element to build xpath
+                        Finding	Login	link:
+                                //div[@class='homepage-hero']//a[text()='Enroll	now']
+                        
+                        Using Contains to find the elements:
+                                Syntax: //tag[contains(attribute, ‘value’)]
+                                
+                        Finding	Login	link:
+                                //div[@id='navbar']//a[contains(text(),'Login')]
+                                //div[@id='navbar']//a[contains(@class,'navbar-link') and contains(@href,'sign_in')]
+                                
+                        Using Starts-With to find the elements:
+                                Syntax:	//tag[starts-with(attribute,	‘value’)]
+                                
+                        Finding	Login link:
+                                //div[@id='navbar']//a[starts-with(@class,'navbar-link')]
+                                
+                        Parent
+                                Syntax:	xpath-to-some-element//parent::<tag>
+                                
+                        Preceding Sibling
+                                Syntax:	xpath-to-some-element//preceding-sibling::<tag>
+                                
+                        Following Sibling
+                                Syntax:	xpath-to-some-element//following-sibling::<tag>
+                         
+                        
+### ⚫ The difference between quit() and close()?
+                --- driver.quit(): The quit() method quits the driver, closing every associated window.
+
+                --- driver.close(): The close() method closes the currently focused window, quitting the driver if the current window is the only open window. If there are no windows open, it will error out.
+                
+      
+### ⚫ Difference between findElement and findElements Methods?  
+                --- FindElement() Method:
+                        --- This command is used to access any single element on the web page
+                        --- It will return the object of the first matching element of the specified locator
+                        --- It will throw NoSuchElementException when it fails to identify the element
+                        
+                --- FindElements() Method:
+                        --- This command is used to uniquely identify the list of web elements within the web page.
+                        --- The usage of this method is very limited
+                        --- If the element doesn’t exist on the page then, then it will return value with an empty list
