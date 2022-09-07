@@ -8,17 +8,17 @@
     
 
 ### Selenium 4 driver import format
-   --- from selenium import webdriver
-   --- from selenium.webdriver.chrome.service import Service
+    --- from selenium import webdriver
+    --- from selenium.webdriver.chrome.service import Service
 
-   --- service_Object = Service("C:\\Users\\ialmu\\PycharmProjects\\Drivers\\chromedriver.exe")
-   --- driver =webdriver.Chrome (service = service_Object)
+    --- service_Object = Service("C:\\Users\\ialmu\\PycharmProjects\\Drivers\\chromedriver.exe")
+    --- driver =webdriver.Chrome (service = service_Object)
   
   
 ### Selenium 3 find element format 
-   --- driver.find_element_by_id ('id')
+    --- driver.find_element_by_id ('id')
   
   
 ### Selenium 4 find element format
-   --- from selenium.webdriver.common.by import By
-   --- driver.find_element(By.ID,'Email')
+    --- from selenium.webdriver.common.by import By
+    --- driver.find_element(By.ID,'Email')
