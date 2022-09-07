@@ -40,3 +40,8 @@
             --- driver.find_element(By.CLASS_NAME, "class name")
             
             --- driver.find_element(By.CSS_SELECTOR, "css selector")
+ 
+ 
+ ### ⚫ How to make custom XPATH?
+ 
+ 
