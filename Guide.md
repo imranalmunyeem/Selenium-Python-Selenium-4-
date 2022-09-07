@@ -24,7 +24,7 @@
         driver.find_element(By.ID,'Email')
 
 
-#### ⚫ How to locate elements?
+### ⚫ How to locate elements?
             --- driver.find_element(By.ID, "id")
             
             --- driver.find_element(By.NAME, "name")
