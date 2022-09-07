@@ -126,3 +126,11 @@
                         --- This command is used to uniquely identify the list of web elements within the web page.
                         --- The usage of this method is very limited
                         --- If the element doesn’t exist on the page then, then it will return value with an empty list
+
+
+### ⚫ Difference b/w getText() and getAttribute() in Selenium WebDriver? 
+                 --- The getText() Method
+                        --- The getText() method returns the innerText of an element
+                        
+                 --- The getAttribute() Method
+                        --- The getAttribute() method fetches the text contained by an attribute in an HTML document. It returns the value of the HTML element's attribute as a string.                       
