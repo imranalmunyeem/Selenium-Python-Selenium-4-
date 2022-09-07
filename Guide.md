@@ -110,3 +110,7 @@
                                 Syntax:	xpath-to-some-element//following-sibling::<tag>
                          
                         
+### ⚫ The difference between quit() and close()?
+                --- driver.quit(): The quit() method quits the driver, closing every associated window.
+
+                --- driver.close(): The close() method closes the currently focused window, quitting the driver if the current window is the only open window. If there are no windows open, it will error out.
