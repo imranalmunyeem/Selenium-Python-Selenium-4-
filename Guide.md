@@ -41,7 +41,32 @@
             
             --- driver.find_element(By.CSS_SELECTOR, "css selector")
  
- 
+
+#### ⚫ What is XPath?
+            --- XPath stands for XML Path Language	
+            --- XPath uses "path like" syntax to identify and navigate nodes in an XML document
+
+
+#### ⚫ Types of XPath?
+            --- Absolute XPath:
+                        --- It is the direct way to find the element, but the disadvantage of the absolute XPath is that if there are any changes made in the path of the element then that XPath gets failed.
+                        
+                        --- The key characteristic of XPath is that it begins with the single forward slash(/) ,which means you can select the element from the root node.
+                        
+                        --- Example: /html/body/div[2]/div[1]/div/h4[1]/b/html[1]/body[1]/div[2]/div[1]/div[1]/h4[1]/b[1]
+                        
+            --- Relative XPath: 
+                        --- Relative Xpath starts from the middle of HTML DOM structure.
+                        
+                        --- It starts with double forward slash (//). 
+                        
+                        --- It can search elements anywhere on the webpage, means no need to write a long xpath and you can start from the middle of HTML DOM structure.    
+                        
+                        --- Relative Xpath is always preferred as it is not a complete path from the root element.
+                        
+                        --- Example: //div[@class='featured-box cloumnsize1']//h4[1]//b[1]
+                        
+                        
  ### ⚫ How to make custom XPATH?
  
  
