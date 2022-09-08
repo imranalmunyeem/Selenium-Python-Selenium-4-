@@ -159,9 +159,10 @@
                                 --- Complicated because have to place it to multiple places.
                         
                  --- Fluent wait:
-                        --- Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible.
+                        --- FluentWait defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition.
                         --- It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.
                         --- Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or until the object is found.
                         --- Fluent Wait commands are most useful when interacting with web elements that can take longer durations to load. This is something that often occurs in Ajax applications.
                         --- While using Fluent Wait, it is possible to set a default polling period as needed. The user can configure the wait to ignore any exceptions during the polling period.
                         --- Fluent waits are also sometimes called smart waits because they don’t wait out the entire duration defined in the code. Instead, the test continues to execute as soon as the element is detected – as soon as the condition specified in .until(YourCondition) method becomes true.
+                        --- Python API does not have a FluentWait class, but it kind of supports it with keyworded arguments.
