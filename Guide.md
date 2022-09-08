@@ -126,3 +126,42 @@
                         --- This command is used to uniquely identify the list of web elements within the web page.
                         --- The usage of this method is very limited
                         --- If the element doesn’t exist on the page then, then it will return value with an empty list
+
+
+### ⚫ Difference b/w getText() and getAttribute() in Selenium WebDriver? 
+                 --- The getText() Method
+                        --- The getText() method returns the innerText of an element
+                        
+                 --- The getAttribute() Method
+                        --- The getAttribute() method fetches the text contained by an attribute in an HTML document. It returns the value of the HTML element's attribute as a string.                       
+
+
+### ⚫ Difference b/w implicit, explicit, and fluent wait?
+                 --- Implicit wait:
+                        --- An implicit wait tells WebDriver to poll the DOM for a certain amount of time when trying to find any element (or elements) not immediately available. 
+                        --- The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object.
+                        --- Advantage:
+                                --- Single statement
+                                --- Will not reduce the performance. If the element is available within the time it will execute the further statements.
+                        --- Disadvantage: 
+                                --- Implicit wait will work for every statements written in the code.
+                                --- If the element is not available within the time mentioned, still there is a chance to get the exception. [N.B: Using try catch block we can solve this issue. In that case, program will still run even after getting the exception]
+                        
+                 --- Explicit wait: 
+                        --- To use explicit wait you have to import WebDriverWait and Expected condition
+                        --- An explicit wait is a code you define to wait for a certain condition to occur before proceeding further in the code. 
+                        --- The extreme case of this is time.sleep(), which sets the condition to an exact time period to wait.
+                        --- Advantage:
+                                --- Explicit wait is based on condition.
+                                --- Effective than other types of wait.
+                                --- We can add poll frequency []
+                         --- Disavantage 
+                                --- Complicated because have to place it to multiple places.
+                        
+                 --- Fluent wait:
+                        --- Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible.
+                        --- It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.
+                        --- Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or until the object is found.
+                        --- Fluent Wait commands are most useful when interacting with web elements that can take longer durations to load. This is something that often occurs in Ajax applications.
+                        --- While using Fluent Wait, it is possible to set a default polling period as needed. The user can configure the wait to ignore any exceptions during the polling period.
+                        --- Fluent waits are also sometimes called smart waits because they don’t wait out the entire duration defined in the code. Instead, the test continues to execute as soon as the element is detected – as soon as the condition specified in .until(YourCondition) method becomes true.
