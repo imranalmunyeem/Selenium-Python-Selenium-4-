@@ -140,10 +140,23 @@
                  --- Implicit wait:
                         --- An implicit wait tells WebDriver to poll the DOM for a certain amount of time when trying to find any element (or elements) not immediately available. 
                         --- The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object.
+                        --- Advantage:
+                                --- Single statement
+                                --- Will not reduce the performance. If the element is available within the time it will execute the further statements.
+                        --- Disadvantage: 
+                                --- Implicit wait will work for every statements written in the code.
+                                --- If the element is not available within the time mentioned, still there is a chance to get the exception. [N.B: Using try catch block we can solve this issue. In that case, program will still run even after getting the exception]
                         
-                 --- Explicit wait:
+                 --- Explicit wait: 
+                        --- To use explicit wait you have to import WebDriverWait and Expected condition
                         --- An explicit wait is a code you define to wait for a certain condition to occur before proceeding further in the code. 
                         --- The extreme case of this is time.sleep(), which sets the condition to an exact time period to wait.
+                        --- Advantage:
+                                --- Explicit wait is based on condition.
+                                --- Effective than other types of wait.
+                                --- We can add poll frequency []
+                         --- Disavantage 
+                                --- Complicated because have to place it to multiple places.
                         
                  --- Fluent wait:
                         --- Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible.
